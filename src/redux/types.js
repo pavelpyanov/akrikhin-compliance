@@ -1,0 +1,13 @@
+export const ADD_NEW_OUESTION = "ADD_NEW_OUESTION";
+export const SHOW_ERROR = "SHOW_ERROR";
+export const HIDE_ERROR = "HIDE_ERROR";
+export const SHOW_AUTH_ERROR = "SHOW_AUTH_ERROR";
+export const HIDE_AUTH_ERROR = "HIDE_AUTH_ERROR";
+export const SHOW_LOADING = "SHOW_LOADING";
+export const HIDE_LOADING = "HIDE_LOADING";
+export const QUESTIONS_FROM_DATABASE = "QUESTIONS_FROM_DATABASE";
+export const USER_VIEW = "USER_VIEW";
+export const ADMIN_VIEW = "ADMIN_VIEW";
+export const CHANGE_DONE = 'CHANGE_DONE';
+export const CHANGE_FILTER = 'CHANGE_FILTER';
+export const CLEAR_FILTER = 'CLEAR_FILTER';
