@@ -1,4 +1,4 @@
-# Akrikhin-copliance - https://akrikhin-complaens.web.app/
+# Akrikhin-copliance
 
 Приложение создано для сбора вопросов у сотрудников компании и хранения их в базе данных
 
