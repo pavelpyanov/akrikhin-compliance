@@ -11,6 +11,9 @@
 Приложение размещено на хостинге Firebase:
 https://akrikhin-complaens.web.app/
 
+Для отправки вопроса требуется проверочное слово
+Панель администратора под логином и паролем
+
 ## Available Scripts
 
 In the project directory, you can run:
