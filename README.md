@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Akrikhin-copliance
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение создано для сбора вопросов у сотрудников компании и хранения их в базе данных
+
+В данном проекте использованиы технологии:
+- React - UI интерфейс
+- Redux - менеджмент state
+- Bootstrap - стилизация
+- Firebase (realtime database, authentication, REST API)
 
 ## Available Scripts
 
