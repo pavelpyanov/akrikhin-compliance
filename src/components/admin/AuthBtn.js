@@ -1,4 +1,4 @@
-import { Auth } from "./Auth";
+import { Auth } from "./Auth"
 
 export const AuthBtn = () => {
   return (
@@ -15,5 +15,5 @@ export const AuthBtn = () => {
         </button>
       </div>
     </>
-  );
-};
+  )
+}

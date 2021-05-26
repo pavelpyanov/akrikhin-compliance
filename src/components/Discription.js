@@ -33,5 +33,5 @@ export const Discription = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

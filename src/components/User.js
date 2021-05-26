@@ -1,8 +1,8 @@
-import { Discription } from "./Discription";
-import { QuestionForm } from "./QuestionForm";
-import { BlockQuestions } from "./BlockQuestions";
-import { AuthBtn } from "./admin/AuthBtn";
-import { Row } from "react-bootstrap";
+import { Discription } from "./Discription"
+import { QuestionForm } from "./QuestionForm"
+import { BlockQuestions } from "./BlockQuestions"
+import { AuthBtn } from "./admin/AuthBtn"
+import { Row } from "react-bootstrap"
 
 export const User = () => {
   return (
@@ -16,5 +16,5 @@ export const User = () => {
       <BlockQuestions />
       <AuthBtn />
     </>
-  );
-};
+  )
+}

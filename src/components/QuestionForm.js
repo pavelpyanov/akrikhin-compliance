@@ -1,33 +1,33 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"
 
-import { Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap"
 import { AlertError } from './AlertError'
 import { Loading } from './Loading'
-import { sendQuestionToDataBase, showError } from "../redux/actions";
+import { sendQuestionToDataBase, showError } from "../redux/actions"
 
 export const QuestionForm = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const error = useSelector( (state) => state.error )
   const submitHandler = (event) => {
-    event.preventDefault();
-    const question = {};
+    event.preventDefault()
+    const question = {}
     for (let index = 0; index < event.target.length; index++) {
-      const name = event.target[index].name;
-      const value = event.target[index].value.trim();
+      const name = event.target[index].name
+      const value = event.target[index].value.trim()
       if (name) {
         if (name === "checkWord" && !value) {
           dispatch(showError('Вы не заполнили проверочное слово. Оно указано в сопроводительном письме к проекту'))
-          return false;
+          return false
         }
         if (name === "text" && value.length < 10) {
           dispatch(showError('Заполните поле с Вашим вопросом'))
-          return false;
+          return false
         }
-        question[name] = value || '';
+        question[name] = value || ''
       }
     }
-    dispatch(sendQuestionToDataBase(question, event.target));
-  };
+    dispatch(sendQuestionToDataBase(question, event.target))
+  }
 
   return (
     <Form onSubmit={submitHandler}>
@@ -82,5 +82,5 @@ export const QuestionForm = () => {
         Отправить вопрос
       </Button>
     </Form>
-  );
-};
+  )
+}

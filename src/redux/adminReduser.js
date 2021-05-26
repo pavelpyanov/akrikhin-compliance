@@ -5,7 +5,7 @@ import {
   CLEAR_FILTER,
   QUESTIONS_FROM_DATABASE,
   USER_VIEW,
-} from "./types";
+} from "./types"
 
 const initialState = {
   serverQuestions: [],
@@ -17,32 +17,32 @@ const initialState = {
     done: false,
     text: "",
   },
-};
+}
 export const adminReduser = (state = initialState, action) => {
   switch (action.type) {
     case QUESTIONS_FROM_DATABASE:
       return {
         ...state,
         serverQuestions: action.payload,
-      };
+      }
     case USER_VIEW:
-      return { ...state, view: "user" };
+      return { ...state, view: "user" }
     case ADMIN_VIEW:
-      return { ...state, view: "admin" };
+      return { ...state, view: "admin" }
     case CHANGE_DONE:
       const newServerQuestions = state.serverQuestions.map((q) => {
         if (q.key === action.payload) {
           return {
             ...q,
             done: !q.done,
-          };
+          }
         }
-        return q;
-      });
+        return q
+      })
       return {
         ...state,
         serverQuestions: [...newServerQuestions],
-      };
+      }
     case CHANGE_FILTER:
       return {
         ...state,
@@ -50,7 +50,7 @@ export const adminReduser = (state = initialState, action) => {
           ...state.filter,
           [action.payload.name]: action.payload.value,
         },
-      };
+      }
     case CLEAR_FILTER:
       return {
         ...state,
@@ -61,8 +61,8 @@ export const adminReduser = (state = initialState, action) => {
           done: false,
           text: "",
         },
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}

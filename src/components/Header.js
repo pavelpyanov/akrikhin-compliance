@@ -1,5 +1,5 @@
-import { Navbar } from "react-bootstrap";
-import logo from "./akrikhin-logo.png";
+import { Navbar } from "react-bootstrap"
+import logo from "./akrikhin-logo.png"
 
 export const Header = () => {
   return (
@@ -15,5 +15,5 @@ export const Header = () => {
       </Navbar.Brand>
       <h1 className="header-title">Вопросы по тематике комплаенс</h1>
     </Navbar>
-  );
-};
+  )
+}

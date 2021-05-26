@@ -13,5 +13,5 @@ export const Question = (props) => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}

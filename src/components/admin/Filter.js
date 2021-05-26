@@ -1,13 +1,13 @@
-import { useDispatch } from "react-redux";
-import { changeFilter, clearFilter } from "../../redux/actions";
+import { useDispatch } from "react-redux"
+import { changeFilter, clearFilter } from "../../redux/actions"
 
 export const Filter = () => {
   const dispatch = useDispatch()
   const filterHandler = (event) => {
-    const name = event.target.name;
+    const name = event.target.name
     const value = (name === 'done')
       ? event.target.checked
-      : event.target.value;
+      : event.target.value
     dispatch(changeFilter(name, value))
   }
   return (
@@ -66,5 +66,5 @@ export const Filter = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,6 +1,6 @@
-import { combineReducers } from "redux";
-import { errorReduser } from "./errorReduser";
-import { questionsReduser } from "./questionsReduser";
+import { combineReducers } from "redux"
+import { errorReduser } from "./errorReduser"
+import { questionsReduser } from "./questionsReduser"
 import { adminReduser } from "./adminReduser"
 
 export const rootReduser = combineReducers({

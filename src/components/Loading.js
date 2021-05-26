@@ -5,5 +5,5 @@ export const Loading = (props) => {
         <span className="visually-hidden">Loading...</span>
       </div>
     </div>
-  );
-};
+  )
+}

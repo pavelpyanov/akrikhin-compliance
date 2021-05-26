@@ -1,18 +1,18 @@
-import { useDispatch, useSelector } from "react-redux";
-import { changeDone } from "../../redux/actions";
-import { Loading } from "../Loading";
+import { useDispatch, useSelector } from "react-redux"
+import { changeDone } from "../../redux/actions"
+import { Loading } from "../Loading"
 
 export const AdminTable = () => {
-  const error = useSelector((state) => state.error);
-  const questions = useSelector((state) => state.admin.serverQuestions);
-  const filter = useSelector((state) => state.admin.filter);
+  const error = useSelector((state) => state.error)
+  const questions = useSelector((state) => state.admin.serverQuestions)
+  const filter = useSelector((state) => state.admin.filter)
   const getDone = (qDone, fDone) => {
     if (fDone === false) {
-      return true;
+      return true
     } else {
-      return qDone === fDone;
+      return qDone === fDone
     }
-  };
+  }
   const filteredQuestions = questions.filter((q) => {
     return (
       q.name.trim().toLowerCase().includes(filter.name.toLowerCase()) &&
@@ -20,16 +20,16 @@ export const AdminTable = () => {
       q.text.trim().toLowerCase().includes(filter.text.toLowerCase()) &&
       q.date.includes(filter.date) &&
       getDone(q.done, filter.done)
-    );
-  });
-  const dispatch = useDispatch();
+    )
+  })
+  const dispatch = useDispatch()
   const doneHandler = (event) => {
-    event.preventDefault();
-    const checked = event.target.checked;
+    event.preventDefault()
+    const checked = event.target.checked
     dispatch(
       changeDone(event.target.id, checked)
-    );
-  };
+    )
+  }
   return (
     <table className="table table-striped">
       <thead>
@@ -44,7 +44,7 @@ export const AdminTable = () => {
       </thead>
       <tbody>
         {filteredQuestions.map((question, index) => {
-          const classList = question.done ? "table-success" : "";
+          const classList = question.done ? "table-success" : ""
           return (
             <tr key={question.key} id="question-row" className={classList}>
               <th scope="row">{index}</th>
@@ -72,9 +72,9 @@ export const AdminTable = () => {
                 </div>
               </td>
             </tr>
-          );
+          )
         })}
       </tbody>
     </table>
-  );
-};
+  )
+}

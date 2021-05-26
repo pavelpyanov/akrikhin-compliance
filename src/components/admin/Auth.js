@@ -1,18 +1,18 @@
-import { useDispatch, useSelector } from "react-redux";
-import { getQuestionsFromDatabase } from "../../redux/actions";
-import { AlertError } from "../AlertError";
+import { useDispatch, useSelector } from "react-redux"
+import { getQuestionsFromDatabase } from "../../redux/actions"
+import { AlertError } from "../AlertError"
 
 export const Auth = () => {
-  const dispatch = useDispatch();
-  const error = useSelector((state) => state.error);
+  const dispatch = useDispatch()
+  const error = useSelector((state) => state.error)
 
   const authFetch = async (event) => {
-    event.preventDefault();
-    const closeModal = document.querySelector(".btn-close");
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    dispatch(getQuestionsFromDatabase(email, password, closeModal));
-  };
+    event.preventDefault()
+    const closeModal = document.querySelector(".btn-close")
+    const email = event.target.email.value
+    const password = event.target.password.value
+    dispatch(getQuestionsFromDatabase(email, password, closeModal))
+  }
 
   return (
     <div
@@ -69,5 +69,5 @@ export const Auth = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
